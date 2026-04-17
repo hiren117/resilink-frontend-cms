@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ResidencySurvey } from "@/Residents/data/ResidencySurvey";
 import { apiService, type SurveyInput } from "@/CMS/api"; // Adjust path if needed

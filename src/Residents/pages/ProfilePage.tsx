@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Briefcase, MapPin, GraduationCap, ClipboardList, Edit3, Mail, Phone } from 'lucide-react';
 
