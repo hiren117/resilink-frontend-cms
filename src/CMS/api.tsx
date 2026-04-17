@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:1337/api';
+// const API_BASE_URL = 'http://localhost:1337/api';
+
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:1337/api';
 
 // 1. Define the Shapes of your data
 export interface ResidentInput {
@@ -27,10 +29,11 @@ export interface SurveyInput {
 // 2. Create the Service Functions
 export const apiService = {
   // Register Resident
-  register: async (payload: ResidentInput) => {
+  register: async (payload: any) => {
     const response = await axios.post(`${API_BASE_URL}/residents`, { data: payload });
-    return response.data; // This returns the resident object including the new ID
+    return response.data;
   },
+  
 
   // Submit Survey
   submitSurvey: async (payload: SurveyInput) => {
